@@ -250,54 +250,55 @@ ul {
 }
 
 .pagination {
+  justify-content: center;
   padding: 0px 0px 60px 0px;
 }
 
-.pagination ul {
-  text-align: center;
-  margin: auto;
+.pagination li {
+  display: inline-block;
 }
 
-.pagination ul li {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 1px solid #1E2759;
-  text-align: center;
-  margin-right: 8px;
-  line-height: 45px;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+.pagination li a {
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+  border-radius: 4px;
 }
 
-.pagination ul li:last-child {
-  margin-right: 0px;
+.pagination li.page-item.current-page.active a {
+  background-color: #FF914D;
+  border-color: #2a2a2a;
 }
 
-.pagination ul li a {
-  color: #1E2759;
-  font-weight: 700;
-  font-size: 15px;
+.pagination li.page-item a:hover {
+  background-color: #FF914D;
+  color: #2a2a2a;
+  border-color: #FF914D;
 }
 
-.pagination ul li a i {
-  line-height: 45px;
+.pagination li.page-item a {
+  border-width: 0px;
+  background-color: white;
+  color: #2a2a2a;
+  border-color: #2a2a2a;
 }
 
-.pagination ul li.active, .pagination ul li:hover {
-  background-color: #1E2759;;
-  -webkit-box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
-          box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+.pagination li a:hover {
+  background-color: #f5f5f5;
 }
 
-.pagination ul li.active a, .pagination ul li:hover a {
-  color: #ffffff;
+.pagination li.active a {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
 }
 
-.pagination ul li.active a i, .pagination ul li:hover a i {
-  color: #ffffff;
+.pagination .dots a {
+  pointer-events: none;
 }
+
 
 .search {
   position: fixed;
@@ -1037,7 +1038,7 @@ input:checked + .slider:before {
   position: relative;
 }
 
-a{
+.a{
   color: #1E2759;
 }
 
@@ -1686,6 +1687,7 @@ a{
 }
 
 .entry-meta .post-author a:hover {
+  text-decoration: none;
   color: #FF914D !important;
 }
 
@@ -2076,6 +2078,7 @@ a{
 }
 
 .categorie:hover {
+  text-decoration: none;
   background-color: #FF914D;
   color: #ffffff !important;
 }
